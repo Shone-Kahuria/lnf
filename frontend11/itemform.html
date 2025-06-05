@@ -3,12 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Report lost items easily on Lost and Found web app for Strathmore University." />
+  <meta name="keywords" content="lost, found, report, item, Strathmore University" />
+  <meta name="author" content="Strathmore University" />
   <title>Report Item - Lost and Found</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="css/style.css" rel="stylesheet" />
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-danger shadow">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-danger shadow" role="navigation" aria-label="Main navigation">
     <div class="container">
       <a class="navbar-brand fw-bold" href="index.html">Lost and Found</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
@@ -20,37 +24,46 @@
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-          <li class="nav-item"><a class="nav-link active" href="itemform.html">Report Item</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="itemform.html">Report Item</a></li>
           <li class="nav-item"><a class="nav-link" href="itemlist.html">Found Items</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <main class="container my-5">
+  <main class="container my-5" role="main">
     <h1 class="mb-4">Report Lost Item</h1>
-    <form id="reportItemForm">
+    <form id="reportItemForm" novalidate>
       <div class="mb-3">
         <label for="itemName" class="form-label">Item Name</label>
-        <input name="itemName" type="text" class="form-control" id="itemName" placeholder="Enter item name" required />
+        <input name="itemName" type="text" class="form-control" id="itemName" placeholder="Enter item name" required aria-describedby="itemNameHelp" />
+        <div id="itemNameHelp" class="form-text text-warning">Please enter the name of the lost item.</div>
+        <div class="invalid-feedback">Item name is required.</div>
       </div>
       <div class="mb-3">
         <label for="itemDescription" class="form-label">Description</label>
-        <textarea name="itemDescription" class="form-control" id="itemDescription" rows="3" placeholder="Enter item description" required></textarea>
+        <textarea name="itemDescription" class="form-control" id="itemDescription" rows="3" placeholder="Enter item description" required aria-describedby="itemDescriptionHelp"></textarea>
+        <div id="itemDescriptionHelp" class="form-text text-warning">Provide a detailed description of the item.</div>
+        <div class="invalid-feedback">Description is required.</div>
       </div>
       <div class="mb-3">
         <label for="dateLost" class="form-label">Date Lost</label>
-        <input name="dateLost" type="date" class="form-control" id="dateLost" required />
+        <input name="dateLost" type="date" class="form-control" id="dateLost" required aria-describedby="dateLostHelp" />
+        <div id="dateLostHelp" class="form-text text-warning">Select the date when the item was lost.</div>
+        <div class="invalid-feedback">Date lost is required.</div>
       </div>
       <div class="mb-3">
         <label for="locationLost" class="form-label">Location Lost</label>
-        <input name="locationLost" type="text" class="form-control" id="locationLost" placeholder="Enter location where item was lost" required />
+        <input name="locationLost" type="text" class="form-control" id="locationLost" placeholder="Enter location where item was lost" required aria-describedby="locationLostHelp" />
+        <div id="locationLostHelp" class="form-text text-warning">Specify the location where the item was lost.</div>
+        <div class="invalid-feedback">Location lost is required.</div>
       </div>
       <button type="submit" class="btn btn-primary w-100">Report Item</button>
+      <div id="formFeedback" class="mt-3" role="alert" aria-live="polite"></div>
     </form>
   </main>
 
-  <footer class="bg-danger text-warning text-center py-3 mt-auto">
+  <footer class="bg-danger text-warning text-center py-3 mt-auto" role="contentinfo">
     <div class="container">
       <small>&copy; 2024 Lost and Found. All rights reserved.</small>
     </div>
