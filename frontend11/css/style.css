@@ -1,0 +1,170 @@
+/* Further enhanced styles for Lost and Found frontend11 */
+
+body {
+  background: linear-gradient(135deg, #00205B, #BA0C2F);
+  color: #FFD100;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #FFD100;
+  text-shadow: 1px 1px 4px #000000cc;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+a {
+  color: #FFD100;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #001F3F;
+  text-decoration: underline;
+}
+
+.container {
+  background-color: #001F3F;
+  padding: 3rem 4rem;
+  border-radius: 25px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.8);
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  max-width: 960px;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #BA0C2F, #FFD100);
+  border: none;
+  color: #00205B;
+  font-weight: 800;
+  padding: 1rem 2.5rem;
+  border-radius: 25px;
+  box-shadow: 0 10px 35px rgba(186, 12, 47, 1);
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  font-size: 1.3rem;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #FFD100, #BA0C2F);
+  color: #001F3F;
+  transform: scale(1.12);
+  box-shadow: 0 15px 50px rgba(255, 209, 0, 1);
+}
+
+.form-label {
+  font-weight: 800;
+  color: #FFD100;
+  margin-bottom: 1rem;
+  display: block;
+  text-shadow: 0 0 10px #FFD100cc;
+  font-size: 1.3rem;
+}
+
+.form-control {
+  border-radius: 25px;
+  border: 3px solid #FFD100;
+  background-color: #003366;
+  color: #FFD100;
+  padding: 1.25rem 1.5rem;
+  box-shadow: inset 0 0 20px #FFD100cc;
+  transition: border-color 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease;
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
+.form-control::placeholder {
+  color: #FFE680dd;
+  font-style: italic;
+}
+
+.form-control:focus {
+  border-color: #FFCC00;
+  background-color: #004080;
+  box-shadow: 0 0 25px #FFCC00dd;
+  outline: none;
+}
+
+.navbar {
+  box-shadow: 0 8px 30px rgba(0,0,0,0.85);
+  background-color: #BA0C2F !important;
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-brand {
+  font-weight: 900;
+  font-size: 2.25rem;
+  color: #FFD100 !important;
+  text-shadow: 1px 1px 7px #000000cc;
+  margin-right: 2rem;
+}
+
+.container main {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  background-color: #001F3F;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+}
+
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 1.8rem;
+    margin-right: 1rem;
+  }
+  .navbar-nav {
+    margin-top: 1rem;
+  }
+}
+
+.nav-link {
+  color: #FFD100 !important;
+  transition: color 0.3s ease;
+  margin-left: 1.5rem;
+  font-weight: 600;
+}
+
+.nav-link:hover {
+  color: #00205B !important;
+  text-decoration: underline;
+}
+
+.table {
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.85);
+  font-size: 1.1rem;
+}
+
+.table thead {
+  background: linear-gradient(135deg, #BA0C2F, #FFD100);
+  color: #00205B;
+  font-weight: 800;
+}
+
+.table tbody tr:hover {
+  background-color: #003366;
+  color: #FFD100;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+footer {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-shadow: 0 0 5px #000000cc;
+  padding: 1rem 0;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Report Item - Lost and Found</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-danger shadow">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">Lost and Found</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto fw-semibold">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link active" href="itemform.html">Report Item</a></li>
+          <li class="nav-item"><a class="nav-link" href="itemlist.html">Found Items</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container my-5">
+    <h1 class="mb-4">Report Lost Item</h1>
+    <form id="reportItemForm">
+      <div class="mb-3">
+        <label for="itemName" class="form-label">Item Name</label>
+        <input name="itemName" type="text" class="form-control" id="itemName" placeholder="Enter item name" required />
+      </div>
+      <div class="mb-3">
+        <label for="itemDescription" class="form-label">Description</label>
+        <textarea name="itemDescription" class="form-control" id="itemDescription" rows="3" placeholder="Enter item description" required></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="dateLost" class="form-label">Date Lost</label>
+        <input name="dateLost" type="date" class="form-control" id="dateLost" required />
+      </div>
+      <div class="mb-3">
+        <label for="locationLost" class="form-label">Location Lost</label>
+        <input name="locationLost" type="text" class="form-control" id="locationLost" placeholder="Enter location where item was lost" required />
+      </div>
+      <button type="submit" class="btn btn-primary w-100">Report Item</button>
+    </form>
+  </main>
+
+  <footer class="bg-danger text-warning text-center py-3 mt-auto">
+    <div class="container">
+      <small>&copy; 2024 Lost and Found. All rights reserved.</small>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/scripts.js"></script>
+</body>
+</html>
