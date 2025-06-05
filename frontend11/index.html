@@ -3,12 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Lost and Found web app for Strathmore University. Report lost items or claim found items easily." />
+  <meta name="keywords" content="lost, found, items, Strathmore University, report, claim" />
+  <meta name="author" content="Strathmore University" />
   <title>Lost and Found - Home</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="css/style.css" rel="stylesheet" />
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-danger shadow">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-danger shadow" role="navigation" aria-label="Main navigation">
     <div class="container">
       <a class="navbar-brand fw-bold" href="index.html">Lost and Found</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
@@ -17,7 +21,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto fw-semibold">
-          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
           <li class="nav-item"><a class="nav-link" href="itemform.html">Report Item</a></li>
@@ -27,21 +31,33 @@
     </div>
   </nav>
 
-  <header class="bg-primary text-warning text-center py-5">
+  <header class="bg-primary text-warning text-center py-5" role="banner">
     <div class="container">
       <h1 class="display-4 fw-bold">Welcome to Lost and Found</h1>
       <p class="lead">Report lost items or claim found items easily.</p>
     </div>
   </header>
 
-  <main class="container my-5">
+  <main class="container my-5" role="main">
     <section>
       <h2 class="mb-4 text-danger">How It Works</h2>
       <p class="fs-5">Use the navigation above to report lost items, view found items, or contact us for assistance.</p>
+      <ol class="fs-5">
+        <li><strong>Report Lost Item:</strong> Navigate to the "Report Item" page and fill out the form with details about your lost item.</li>
+        <li><strong>View Found Items:</strong> Check the "Found Items" page regularly to see if your lost item has been found and listed.</li>
+        <li><strong>Contact Us:</strong> If you need help or want to claim an item, use the "Contact" page to reach out to our support team.</li>
+      </ol>
     </section>
-  </main>
+    <section class="mt-5">
+      <h2 class="mb-4 text-danger">Tips for Using Lost and Found</h2>
+      <ul class="fs-5">
+        <li>Provide as much detail as possible when reporting lost items to increase chances of recovery.</li>
+        <li>Check the found items list regularly for updates.</li>
+        <li>Contact support promptly if you find a match or need help.</li>
+      </ul>
+    </section>
 
-  <footer class="bg-danger text-warning text-center py-3 mt-auto">
+  <footer class="bg-danger text-warning text-center py-3 mt-auto" role="contentinfo">
     <div class="container">
       <small>&copy; 2025 Lost and Found. All rights reserved.</small>
     </div>
